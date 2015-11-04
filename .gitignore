@@ -1,0 +1,6 @@
+
+# bower
+/app/bower_components
+
+# npm
+node_modules
