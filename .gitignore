@@ -1,6 +1,9 @@
 
 # bower
-/app/bower_components
+bower_components
 
 # npm
 node_modules
+
+# build
+build

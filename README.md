@@ -7,6 +7,26 @@
 
 该脚手架的目的是在于期望能够快速搭建和部署一般的web站点。
 
+## webpack
+
+npm install # 初始化安装依赖包
+
+见后面文对 package.json 文件的简介。
+
+声明在package.json文件里的scripts一般字段和命令的解释：
+
+```
+npm run watch # 监听文件
+npm run server # 开启本地server，设置端口80，URL： http://localhost
+npm run build # 手动开发环境编译一次
+NODE_ENV=production npm run build # 在当前控制台里设置变量NODE_ENV为production，开启发布环境编译
+```
+
+webpack的基本配置见 `webpack.config.js`文件，以及webpack官方文档。
+
+- 通过加载器loader可以实现require不同类型的文件，见[webpack - loaders](http://webpack.github.io/docs/using-loaders.html)
+
+
 ## package.json
 
 	npm install
@@ -31,10 +51,21 @@
 
 如果依赖包已被全局安装，可以通过 `npm link <packagename>` 命令关联到本地。
 
-升级依赖包： `npm update --save <packagename>` 或 `npm update --save-dev <packagename>`
-卸载依赖包： `npm uninstall --save <packagename>` 或 `npm uninstall --save-dev <packagename>`
+* 升级依赖包： `npm update --save <packagename>` 或 `npm update --save-dev <packagename>`
+* 卸载依赖包： `npm uninstall --save <packagename>` 或 `npm uninstall --save-dev <packagename>`
 
-以上命令里其中 `install` 可简写为 `i`，`uninstall` 可简写为 `un`，`--save` 可简写为 `-S`，`--save-dev`可简写为 `-D`，`link` 可简写为 `ln`
+package.json 文件里的scripts字段可以通过`npm run-script` （可简写为 `npm run`）执行所声明的命令。
+
+
+
+command | alias
+:------- | :---- 
+npm install | npm i 
+npm uninstall | npm un 
+npm i --save | npm i -S 
+npm i --save-dev | npm i -D 
+npm link | npm ln |
+npm run-script | npm run 
 
 
 ## bower.json
@@ -50,9 +81,3 @@ dependencies 字段包含custom端依赖的包，即浏览器加载的依赖包�
 - [moment](http://momentjs.com/): Parse, validate, manipulate, and display dates in JavaScript.
 - [angularjs](https://angularjs.org/): HTML enhanced for web apps!
 
-## shell 脚本
-
-完成自动化任务和部署。
-
-
-（目前还在不断完善中...）

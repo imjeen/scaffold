@@ -7,12 +7,11 @@
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/imjeen/scaffold",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "/app/bower_components",
     "test",
     "tests"
   ],
