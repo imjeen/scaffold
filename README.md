@@ -9,7 +9,9 @@
 
 ## webpack
 
+```
 npm install # 初始化安装依赖包
+```
 
 见后面文对 package.json 文件的简介。
 
@@ -25,6 +27,8 @@ NODE_ENV=production npm run build # 在当前控制台里设置变量NODE_ENV为
 webpack的基本配置见 `webpack.config.js`文件，以及webpack官方文档。
 
 - 通过加载器loader可以实现require不同类型的文件，见[webpack - loaders](http://webpack.github.io/docs/using-loaders.html)
+
+至于对多个项目的管理，webpack也能轻松搞定，见 **multi-webpack** 分支的目录 `multi-webpack`
 
 
 ## package.json
